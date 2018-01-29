@@ -4,11 +4,6 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-/**
- * Author        Hule  hu.le@cesgroup.com.cn
- * Date          2017/6/12 15:38
- * Description:  TODO: 自定义环形进度条
- */
 
 public class RingProgressActivity extends Activity {
 

@@ -10,11 +10,6 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
-/**
- * Author        Hule  hu.le@cesgroup.com.cn
- * Date          2017/6/12 13:30
- * Description:  TODO: 自定义环形进度条
- */
 
 public class RingProgressView extends View {
 
@@ -118,12 +113,6 @@ public class RingProgressView extends View {
         super.onLayout(changed, left, top, right, bottom);
     }
 
-    /**
-     * 把dp转换成px
-     *
-     * @param dipValue
-     * @return
-     */
     private int dip2px(int dipValue) {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (dipValue * scale + 0.5f);
@@ -135,6 +124,7 @@ public class RingProgressView extends View {
 
     public void setCurrentProgress(int currentProgress) {
         this.currentProgress = currentProgress;
+        invalidate();
     }
 
     public int getMaxProgress() {
@@ -143,5 +133,6 @@ public class RingProgressView extends View {
 
     public void setMaxProgress(int maxProgress) {
         this.maxProgress = maxProgress;
+        invalidate();
     }
 }
